@@ -1,0 +1,1 @@
+This simple project is designed to give new users a very quick overview on how to execute tasks with git commands and to get a simple understanding on how to use branches for development as a beginner.
