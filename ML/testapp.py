@@ -2,17 +2,21 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-# 🔹 Ange din fil-path (exempelfilen som skapades tidigare)
-file_path = r"C:\workspace\vallesportfolio\ML\news_data_example.csv"
+# Ange fil-path (använd exempelfilen)
+file_path = "news_data_example.csv"
 
-# 🔹 Läs in CSV-filen
+# Läs in filen
 df = pd.read_csv(file_path)
 
-# 🔹 Konvertera datum till datetime-format om det finns en "date"-kolumn
+# Konvertera datum till datetime-format om "date" finns
 if "date" in df.columns:
-    df["date"] = pd.to_datetime(df["date"])
+    df["date"] = pd.to_datetime(df["date"], errors="coerce")
 
-# 📌 Streamlit UI
+# Lägg till en dummy-numerisk kolumn om ingen numerisk data hittas
+if df.select_dtypes(include=["number"]).empty:
+    df["dummy_count"] = range(1, len(df) + 1)  # Skapar en numerisk kolumn
+
+# UI-design
 st.title("📊 Dashboard för Nyhetsdata")
 
 # 🔍 Sökfunktion
@@ -24,22 +28,22 @@ if search_query:
 st.subheader("📂 Data-tabell")
 st.dataframe(df)
 
-# 📊 Statistik och analys om numeriska kolumner finns
-if not df.select_dtypes(include=["number"]).empty:
-    st.subheader("📈 Statistik & Visualisering")
+# 📊 Statistik och analys (nu alltid synlig)
+st.subheader("📈 Statistik & Visualisering")
 
-    # Välj en numerisk kolumn att analysera
-    column = st.selectbox("Välj en kolumn för analys", df.select_dtypes(include=["number"]).columns)
+# Välj en numerisk kolumn
+num_cols = df.select_dtypes(include=["number"]).columns
+if len(num_cols) > 0:
+    column = st.selectbox("Välj en kolumn för analys", num_cols)
 
-    # Visa grundläggande statistik
+    # Visa statistik
     st.write(df[column].describe())
 
-    # Histogram över vald kolumn
+    # Histogram
     fig = px.histogram(df, x=column, title=f"Histogram över {column}")
     st.plotly_chart(fig)
 
     # Visa korrelationsmatris om fler än en numerisk kolumn finns
-    if len(df.select_dtypes(include=["number"]).columns) > 1:
+    if len(num_cols) > 1:
         st.subheader("🔗 Korrelationsmatris")
         st.write(df.corr())
-
