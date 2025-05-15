@@ -148,7 +148,7 @@ footer {
     background: transparent;
 }
 .topnav a {
-    color: #2563eb;
+    color: #d1d1d1;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
@@ -158,5 +158,5 @@ footer {
 }
 .topnav a:hover, .topnav a.active {
     background: #cb8401;
-    color: #fff;
+    color: #d1d1d1;
 }
