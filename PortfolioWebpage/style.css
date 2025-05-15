@@ -1,8 +1,8 @@
 body {
     margin: 0;
     font-family: Verdana, Arial, sans-serif;
-    background: #181a1b;   /* <- Mörkgrå bakgrund */
-    color: #f3f4f6;        /* <- Nästan vit text */
+    background: #47494a;   /* <- Mörkgrå bakgrund */
+    color: #e0e0e0;        /* <- Nästan vit text */
     transition: background 0.2s, color 0.2s;
 }
 
