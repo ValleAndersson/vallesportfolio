@@ -16,24 +16,6 @@ body {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     box-shadow: 0 3px 12px rgba(30,60,110,0.08);
-
-    /* Mjukare och mer naturlig fade! */
-    -webkit-mask-image: linear-gradient(
-        to bottom, 
-        black 0%, 
-        black 60%, 
-        rgba(0,0,0,0.6) 75%,
-        rgba(0,0,0,0.25) 90%,
-        transparent 100%
-    );
-    mask-image: linear-gradient(
-        to bottom, 
-        black 0%, 
-        black 60%, 
-        rgba(0,0,0,0.6) 75%,
-        rgba(0,0,0,0.25) 90%,
-        transparent 100%
-    );
 }
 
 
