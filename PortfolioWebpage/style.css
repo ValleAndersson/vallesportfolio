@@ -1,0 +1,88 @@
+:root {
+    --bg: #f8fafc;
+    --fg: #1e293b;
+    --accent: #2563eb;
+    --card-bg: #fff;
+}
+body.dark {
+    --bg: #1e293b;
+    --fg: #f8fafc;
+    --card-bg: #222738;
+}
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    transition: background 0.2s, color 0.2s;
+}
+header {
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+}
+header h1 {
+    margin: 0;
+    font-size: 2.4rem;
+}
+header p {
+    color: var(--accent);
+}
+#toggle-dark {
+    background: none;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 0.4em 1em;
+    border-radius: 1em;
+    cursor: pointer;
+    margin-top: 1em;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    margin: 2em 0;
+}
+.card {
+    background: var(--card-bg);
+    box-shadow: 0 2px 8px rgba(20,30,70,0.08);
+    border-radius: 1.2em;
+    flex: 1 1 250px;
+    max-width: 320px;
+    padding: 1.2em;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s;
+}
+.card:hover {
+    box-shadow: 0 6px 22px rgba(30,30,70,0.14);
+}
+.card-title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.card-desc {
+    margin: 0.7em 0;
+    font-size: 1em;
+}
+.card-links {
+    margin-top: auto;
+    display: flex;
+    gap: 1em;
+}
+.card img {
+    max-width: 100%;
+    border-radius: 0.8em;
+    margin-bottom: 0.7em;
+}
+@media (max-width: 700px) {
+    .cards {
+        flex-direction: column;
+        gap: 1em;
+    }
+}
+footer {
+    text-align: center;
+    color: #999;
+    font-size: 0.97em;
+    padding: 2em 0 1em 0;
+}
