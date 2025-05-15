@@ -3,18 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valle's BI Portfolio</title>
+    <title>Valentin Andersson | BI Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Valentin Andersson</h1>
-        <p>Business Intelligence Portfolio</p>
-        <button id="toggle-dark">🌙</button>
+    <!-- Banner/Hero Section -->
+    <header class="hero">
+        <nav>
+            <ul>
+                <li><a href="#home">Start</a></li>
+                <li><a href="#about">Om Mig</a></li>
+                <li><a href="#projects">Projekt</a></li>
+            </ul>
+        </nav>
+        <div id="home" class="hero-content">
+            <h1>Valentin Andersson</h1>
+            <h2>Business Intelligence Portfolio</h2>
+            <p>Driven BI-utvecklare med fokus på dataanalys, rapportering & visualisering.</p>
+            <button id="toggle-dark">🌙</button>
+        </div>
     </header>
     <main>
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <h2>Om Mig</h2>
+            <p>
+                Jag är en engagerad och nyfiken BI-utvecklare som gillar att lösa problem med hjälp av data. 
+                Erfarenhet av Power BI, SQL, Python och rapportering för verksamhetsbeslut.
+            </p>
+        </section>
+        <!-- Projects Section -->
         <section id="projects">
-            <h2>Projects</h2>
+            <h2>Projekt</h2>
             <div id="project-cards" class="cards"></div>
         </section>
     </main>
