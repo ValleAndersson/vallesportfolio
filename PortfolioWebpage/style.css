@@ -1,10 +1,11 @@
 body {
     margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: var(--bg);
-    color: var(--fg);
+    font-family: Verdana, Arial, sans-serif;
+    background: #181a1b;   /* <- Mörkgrå bakgrund */
+    color: #f3f4f6;        /* <- Nästan vit text */
     transition: background 0.2s, color 0.2s;
 }
+
 
 .hero {
     background: linear-gradient(120deg, #2563eb 0%, #6ee7b7 100%);
