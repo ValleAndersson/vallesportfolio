@@ -157,6 +157,6 @@ footer {
     transition: background 0.2s, color 0.2s;
 }
 .topnav a:hover, .topnav a.active {
-    background: #2563eb;
+    background: #cb8401;
     color: #fff;
 }
