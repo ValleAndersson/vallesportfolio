@@ -10,15 +10,16 @@ body {
 .hero {
     background: linear-gradient(120deg, #f89604 0%, #fbc97e 100%);
     color: #474747;
-    padding: 3rem 1rem 2rem 1rem;
+    padding: 5rem 1rem 8rem 1rem; /* Extra höjd och mer plats nedåt */
     position: relative;
     text-align: center;
-    border-bottom-left-radius: 0; /* Ta bort rundade hörn */
+    border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     box-shadow: 0 3px 12px rgba(30,60,110,0.08);
-    /* NYTT! */
-    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+
+    /* Lång och smooth fade till bakgrunden */
+    -webkit-mask-image: linear-gradient(to bottom, black 20%, black 75%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 20%, black 75%, transparent 100%);
 }
 
 .hero nav {
