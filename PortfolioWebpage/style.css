@@ -1,13 +1,13 @@
 body {
     margin: 0;
     font-family: Verdana, Arial, sans-serif;
-    background: #47494a;   /* <- Mörkgrå bakgrund */
+    background: #00141f;   /* <- Mörkgrå bakgrund */
     color: #e0e0e0;        /* <- Nästan vit text */
     transition: background 0.2s, color 0.2s;
 }
 
 .hero {
-    background: linear-gradient(120deg, #f89604 0%, #fbc97e 100%);
+    background: linear-gradient(120deg, #00638e 0%, #02c2e4 100%);
     color: #474747;
     padding: 5rem 1rem 8rem 1rem;
     position: relative;
