@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: Verdana, Arial, sans-serif;
     background: #00141f;   /* <- Mörkgrå bakgrund */
-    color: #e0e0e0;        /* <- Nästan vit text */
+    color: #d6d6d6;        /* <- Nästan vit text */
     transition: background 0.2s, color 0.2s;
 }
 
@@ -91,7 +91,7 @@ body.dark #toggle-dark {
     gap: 2.5rem;
     max-width: 950px;
     margin: 3em auto 2em auto;
-    background: #f79308;
+    background: #005285;
     padding: 2.5em 2em;
     border-radius: 1.4em;
     box-shadow: 0 1px 6px rgba(20,30,50,0.08);
@@ -124,7 +124,7 @@ body.dark #toggle-dark {
 .about-content p {
     font-size: 1.13em;
     line-height: 1.6;
-    color: #393939;
+    color: #d6d6d6;
     margin-bottom: 1.5em;
     white-space: pre-line;
 }
@@ -236,7 +236,7 @@ footer {
     background: transparent;
 }
 .topnav a {
-    color: #d1d1d1;
+    color: #d6d6d6;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
@@ -245,6 +245,6 @@ footer {
     transition: background 0.2s, color 0.2s;
 }
 .topnav a:hover, .topnav a.active {
-    background: #ffa023;
-    color: #3d3d3d;
+    background: #014f6e;
+    color: #d6d6d6;
 }
