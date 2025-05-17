@@ -1,9 +1,13 @@
 body {
     margin: 0;
     font-family: Verdana, Arial, sans-serif;
-    background: #00141f;   /* <- Mörkgrå bakgrund */
-    color: #d6d6d6;        /* <- Nästan vit text */
+    background: #00141f; 
+    color: #d6d6d6; 
     transition: background 0.2s, color 0.2s;
+}
+
+h1 {
+    text-align: center;
 }
 
 .hero {
